@@ -82,3 +82,17 @@ body{
     gap: 1em;
 }
 
+.buttons{
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-form{
+    font-size: 1rem;
+    padding: 1em 2em;
+    border: 2px solid var(--cor-textos);
+    border-radius: 10px;
+    background-color: var(--cor-de-fundo-pagina);
+    color: var(--cor-textos);
+}

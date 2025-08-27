@@ -23,14 +23,14 @@
                     <div class="text-field">
 
                         <label for="name">Nome Completo:</label>
-                        <input type="text" name="name" id="name" class="text-box">
+                        <input type="text" name="name" id="name" class="text-box field">
 
                     </div>
 
                     <div class="text-field">
 
                         <label for="date">Data de Nascimento:</label>
-                        <input type="date" name="date" id="date" class="selecao">
+                        <input type="date" name="date" id="date" class="selecao field">
 
                     </div>
 
@@ -40,14 +40,14 @@
 
                         <div>
 
-                            <input type="radio" name="gender" id="male" value="Masculino">
+                            <input type="radio" name="gender" id="male" value="Masculino" checked class="field">
                             <label for="male">Masculino</label>
                         
                         </div>
                         
                         <div>
 
-                            <input type="radio" name="gender" id="fem" value="Feminino">
+                            <input type="radio" name="gender" id="fem" value="Feminino" class="field">
                             <label for="fem">Feminino</label>
                         
                         </div>
@@ -62,14 +62,14 @@
                     <div class="text-field">
 
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="email@email.com" class="text-box">
+                        <input type="email" name="email" id="email" placeholder="email@email.com" class="text-box field">
 
                     </div>
 
                     <div class="text-field">
 
                         <label for="tel">Telefone:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="(xx)xxxxx-xxxx" class="text-box">
+                        <input type="tel" name="tel" id="tel" placeholder="(xx)xxxxx-xxxx" class="text-box field">
 
                     </div>
 
@@ -82,7 +82,7 @@
                     <div class="text-field">
 
                         <label for="estado">Estado:</label>
-                        <select id="estado" class="selecao">
+                        <select id="estado" name="state" class="selecao field">
                             
                             <option value="">Selecione</option>
                             
@@ -93,7 +93,7 @@
                     <div class="text-field">
 
                         <label for="estado">Cidade:</label>
-                        <select id="cidade" class="selecao" disabled>
+                        <select id="cidade" name="city" class="selecao field" disabled>
                             
                             <option value="">Selecione</option>
                             
@@ -104,13 +104,35 @@
                     <div class="text-field">
 
                         <label for="bairro">Bairro: </label>
-                        <input type="text" name="bairro" id="bairro" class="text-box">
+                        <input type="text" name="bairro" id="bairro" class="text-box field">
+
+                    </div>
+
+                    <div class="text-field">
+
+                        <label for="rua">Rua: </label>
+                        <input type="text" name="rua" id="rua" class="text-box field">
+
+                    </div>
+
+                    <div class="text-field">
+
+                        <label for="num">Número: </label>
+                        <input type="text" name="num" id="num" class="text-box field">
 
                     </div>
 
 
-
                 </fieldset>
+
+
+                <div class="buttons">
+
+                    <input type="reset" value="Limpar" class="btn-form">
+                    
+                    <input type="submit" value="Confirmar" id="btn-submit" class="btn-form">
+
+                </div>
 
             </form>
 
@@ -120,5 +142,6 @@
 
 
     <script src="scripts/estados.js"></script>
+    <script src="scripts/validar.js"></script>
 </body>
 </html>
