@@ -2,10 +2,10 @@ const fields = Array.from(document.querySelectorAll('.field'))
 
 const submitButton = document.querySelector('#btn-submit')
 
+const errorMessage = document.querySelector('#msg')
+
 
 submitButton.addEventListener('click', (event) => {
-
-    event.preventDefault();
 
     const isEmpty = fields.some((field) => {
     
@@ -27,10 +27,25 @@ submitButton.addEventListener('click', (event) => {
             behavior: 'smooth'
         });
 
+        event.preventDefault();
+
+        errorMessage.classList.add('error')
+
+        errorMessage.textContent = 'Por favor, preencha os campos marcados em vermelho'
+
+
         fields.forEach((field) => {
 
-            field.style.border = '2px solid red'
+            field.style.border = '2px solid #f41b1b'
 
+            setTimeout(() => {
+
+            errorMessage.classList.remove('error')
+
+            errorMessage.textContent = ''
+
+            field.style.border = '2px solid #032202'
+            }, 3000)
         })
 
     } else {
