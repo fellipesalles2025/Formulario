@@ -34,7 +34,7 @@ submitButton.addEventListener('click', (event) => {
         errorMessage.textContent = 'Por favor, preencha todos os campos'
 
 
-        fields.forEach((field) => {
+        fields.forEach(() => {
 
             setTimeout(() => {
 
