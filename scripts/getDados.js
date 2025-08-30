@@ -15,4 +15,24 @@ const person = {
     },
 }
 
-console.log(person)
+const {name, dataNascimento, sexo, email, telefone, endereco} = person
+
+const data = dataNascimento.split('-').reverse().join('/')
+
+const list = document.querySelector('#lista')
+
+const listElement = document.createElement('li')
+
+listElement.innerHTML = `<div>\
+                            <h2>${name}</h2>\
+                            <p>Data de Nascimento: ${data}</p>\
+                            <p>Sexo: ${sexo}</p>\
+                            <p>Email: ${email}</p>\
+                            <p>Telefone: ${telefone}</p>\
+                            <p>Endereço: ${endereco.rua}, ${endereco.numero}, ${endereco.bairro}, ${endereco.cidade}/${endereco.estado}</p>\
+                        </div>`
+
+listElement.classList.add('dados')
+
+list.appendChild(listElement)
+

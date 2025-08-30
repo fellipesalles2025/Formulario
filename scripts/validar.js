@@ -31,12 +31,10 @@ submitButton.addEventListener('click', (event) => {
 
         errorMessage.classList.add('error')
 
-        errorMessage.textContent = 'Por favor, preencha os campos marcados em vermelho'
+        errorMessage.textContent = 'Por favor, preencha todos os campos'
 
 
         fields.forEach((field) => {
-
-            field.style.border = '2px solid #f41b1b'
 
             setTimeout(() => {
 
@@ -44,7 +42,6 @@ submitButton.addEventListener('click', (event) => {
 
             errorMessage.textContent = ''
 
-            field.style.border = '2px solid #032202'
             }, 3000)
         })
 
@@ -56,12 +53,7 @@ submitButton.addEventListener('click', (event) => {
 
                 if(field.checked) console.log(field.value)
 
-            } else {
-
-                console.log(field.value)
-
             }
-
             
         })
     }
