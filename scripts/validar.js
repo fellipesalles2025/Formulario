@@ -44,18 +44,6 @@ submitButton.addEventListener('click', (event) => {
 
             }, 3000)
         })
-
-    } else {
-        
-        fields.forEach((field) => {
-            
-            if(field.type === 'radio') {
-
-                if(field.checked) console.log(field.value)
-
-            }
-            
-        })
     }
     
 })
